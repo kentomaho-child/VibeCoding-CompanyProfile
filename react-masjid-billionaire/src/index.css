@@ -58,6 +58,10 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, #003528 0%, #01a580 100%);
+  }
 }
 
 /* Hide number input spinners */

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const navLinks = [
   { label: 'Home', to: '/' },
-  { label: 'Programs', to: '/' },
+  { label: 'Donasi', to: '/donasi' },
   { label: 'Directory', to: '/' },
   { label: 'Zakat', to: '/zakat' },
   { label: 'About', to: '/about' },
@@ -65,9 +65,12 @@ export default function Navbar() {
           >
             Join Community
           </NavLink>
-          <button className="px-6 py-2 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md uppercase tracking-wider rounded-lg shadow-sm hover:shadow-md transition-all">
-            Donate Now
-          </button>
+          <NavLink
+            to="/donasi"
+            className="px-6 py-2 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md uppercase tracking-wider rounded-lg shadow-sm hover:shadow-md transition-all"
+          >
+            Donasi Sekarang
+          </NavLink>
         </div>
       </div>
     </nav>
