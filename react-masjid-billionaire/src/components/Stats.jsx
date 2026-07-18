@@ -1,8 +1,8 @@
 const stats = [
-  { value: '5,000+', label: 'Anggota Jamaah', color: 'text-primary' },
-  { value: 'Rp 120M+', label: 'Dana Terkelola', color: 'text-emerald-accent' },
-  { value: '350+', label: 'Binaan UMKM', color: 'text-secondary' },
-  { value: '24/7', label: 'Layanan Umat', color: 'text-primary' },
+  { value: '4', label: 'Pilar Program', color: 'text-primary' },
+  { value: '12+', label: 'Program Unggulan', color: 'text-emerald-accent' },
+  { value: '100%', label: 'Beasiswa Santri', color: 'text-secondary' },
+  { value: 'ZISWAF', label: 'Dikelola Amanah', color: 'text-primary' },
 ]
 
 export default function Stats() {

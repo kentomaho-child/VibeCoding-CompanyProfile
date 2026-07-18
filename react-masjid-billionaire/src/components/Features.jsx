@@ -1,30 +1,45 @@
+import { Link } from 'react-router-dom'
+
 const features = [
   {
-    icon: 'school',
-    title: 'Academy & Programs',
+    icon: 'mosque',
+    title: 'Baitullah',
     description:
-      'Kurikulum komprehensif yang menggabungkan Fiqh Muamalah dengan strategi bisnis modern untuk mencetak entrepreneur tangguh.',
+      'Berfokus pada pembangunan dan kemakmuran masjid sebagai pusat ibadah dan peradaban.',
     accent: 'bg-emerald-accent group-hover:bg-emerald-accent group-hover:text-white',
     bar: 'bg-emerald-accent',
-    link: 'Lihat Program',
+    link: 'Selengkapnya',
+    to: '/about',
   },
   {
-    icon: 'groups',
-    title: 'Business Community',
+    icon: 'menu_book',
+    title: 'Baitul Qur\u2019an',
     description:
-      'Jaringan eksklusif billionaire muslim untuk kolaborasi strategis, mentoring bisnis, dan akses ke permodalan syariah.',
+      'Mengembangkan pendidikan Islam, pembinaan karakter, dan kaderisasi generasi Qurani.',
     accent: 'bg-secondary group-hover:bg-secondary group-hover:text-white',
     bar: 'bg-secondary-fixed',
-    link: 'Bergabung',
+    link: 'Selengkapnya',
+    to: '/about',
   },
   {
-    icon: 'real_estate_agent',
-    title: 'Zakat & Infaq',
+    icon: 'volunteer_activism',
+    title: 'Baitul Maal',
     description:
-      'Pengelolaan dana umat secara profesional, transparan, dan produktif untuk mengentaskan kemiskinan dan membangun ekonomi.',
+      'Mengelola penghimpunan dan penyaluran dana sosial melalui berbagai program kemanusiaan.',
     accent: 'bg-primary-container group-hover:bg-primary-container group-hover:text-white',
     bar: 'bg-primary-container',
     link: 'Mulai Berdonasi',
+    to: '/donasi',
+  },
+  {
+    icon: 'storefront',
+    title: 'Baitul Muamalah',
+    description:
+      'Mengembangkan unit usaha produktif untuk mendukung kemandirian dakwah dan operasional masjid.',
+    accent: 'bg-secondary group-hover:bg-secondary group-hover:text-white',
+    bar: 'bg-secondary',
+    link: 'Lihat Direktori',
+    to: '/directory',
   },
 ]
 
@@ -33,13 +48,17 @@ export default function Features() {
     <section className="py-24 px-gutter max-w-max-width mx-auto bg-surface-bright">
       <div className="text-center mb-16 space-y-4">
         <span className="font-label-md text-label-md text-emerald-accent uppercase tracking-widest font-bold">
-          Pilar Peradaban
+          Empat Pilar Utama
         </span>
-        <h2 className="font-headline-lg text-headline-lg text-primary">Ekosistem Pemberdayaan Umat</h2>
+        <h2 className="font-headline-lg text-headline-lg text-primary">Pilar Program</h2>
+        <p className="font-body-md text-body-md text-muted-slate max-w-2xl mx-auto">
+          Seluruh aktivitas Masjid Muslim Billionaire dikembangkan melalui empat pilar utama yang
+          mengintegrasikan dakwah, pendidikan, kepedulian sosial, dan kemandirian ekonomi.
+        </p>
         <div className="w-24 h-1 bg-secondary mx-auto mt-6" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map((feature) => (
           <div
             key={feature.title}
@@ -57,12 +76,12 @@ export default function Features() {
                 {feature.description}
               </p>
             </div>
-            <a
+            <Link
               className="flex items-center gap-2 text-emerald-accent font-bold hover:gap-4 transition-all"
-              href="#"
+              to={feature.to}
             >
               {feature.link} <span className="material-symbols-outlined">arrow_forward</span>
-            </a>
+            </Link>
           </div>
         ))}
       </div>

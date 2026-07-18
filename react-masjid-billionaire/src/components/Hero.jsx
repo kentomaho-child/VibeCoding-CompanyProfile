@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const prayerTimes = [
   { name: 'Subuh', time: '04:12', active: false },
   { name: 'Dzuhur', time: '11:45', active: false },
@@ -23,29 +25,36 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-1 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
             <span className="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse" />
             <span className="font-label-sm text-label-sm uppercase tracking-widest">
-              Pusat Keunggulan Ekonomi Syariah
+              Cinangneng, Bogor &middot; Naungan YMBI
             </span>
           </div>
 
           <h1 className="font-headline-xl text-headline-xl text-white leading-tight">
-            Membangun Peradaban, <br />
-            <span className="text-secondary-fixed">Mencetak Billionaire Muslim.</span>
+            Membangun Peradaban <br />
+            <span className="text-secondary-fixed">Berbasis Masjid.</span>
           </h1>
 
           <p className="font-body-lg text-body-lg text-white/80 max-w-xl">
-            Melalui integrasi spiritualitas yang mendalam dan ekosistem ekonomi yang kuat, kami
-            hadir untuk melahirkan generasi pengusaha muslim yang bertaqwa dan berdampak bagi umat.
+            Masjid Muslim Billionaire adalah gerakan dakwah, sosial, pendidikan, dan pemberdayaan
+            umat. Menjadikan masjid bukan hanya tempat ibadah, tetapi pusat lahirnya solusi bagi
+            berbagai persoalan umat.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <button className="px-8 py-4 bg-emerald-accent hover:bg-emerald-accent/90 text-white font-label-md text-label-md uppercase tracking-wider rounded-lg flex items-center gap-3 transition-all">
+            <Link
+              to="/donasi"
+              className="px-8 py-4 bg-emerald-accent hover:bg-emerald-accent/90 text-white font-label-md text-label-md uppercase tracking-wider rounded-lg flex items-center gap-3 transition-all"
+            >
               Salurkan Donasi
               <span className="material-symbols-outlined">volunteer_activism</span>
-            </button>
-            <button className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-label-md text-label-md uppercase tracking-wider rounded-lg flex items-center gap-3 transition-all">
-              Jadwal Kajian
-              <span className="material-symbols-outlined">event_note</span>
-            </button>
+            </Link>
+            <Link
+              to="/about"
+              className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-label-md text-label-md uppercase tracking-wider rounded-lg flex items-center gap-3 transition-all"
+            >
+              Tentang Kami
+              <span className="material-symbols-outlined">arrow_forward</span>
+            </Link>
           </div>
         </div>
 

@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom'
 
 const quickLinks = [
-  { label: 'About Us', to: '/about' },
-  { label: 'Privacy Policy', to: '/' },
-  { label: 'Terms of Service', to: '/' },
-  { label: 'Contact Us', to: '/' },
-  { label: 'Volunteer', to: '/' },
+  { label: 'Tentang Kami', to: '/about' },
+  { label: 'Direktori Bisnis', to: '/directory' },
+  { label: 'Zakat', to: '/zakat' },
+  { label: 'Donasi ZISWAF', to: '/donasi' },
+  { label: 'Gabung Komunitas', to: '/join' },
 ]
 
 const contacts = [
-  { icon: 'location_on', text: 'Jl. Peradaban No. 101, Jakarta Selatan, DKI Jakarta' },
-  { icon: 'phone_iphone', text: '+62 811 2345 6789' },
+  { icon: 'location_on', text: 'Kawasan Masjid Muslim Billionaire, Cinangneng, Bogor, Jawa Barat' },
+  { icon: 'apartment', text: 'Yayasan Muslim Billionaire Indonesia (YMBI)' },
   { icon: 'mail', text: 'info@muslimbillionaire.org' },
 ]
 
@@ -33,8 +33,8 @@ export default function Footer() {
             </span>
           </div>
           <p className="font-body-md text-body-md text-surface-variant/70 leading-relaxed">
-            Menciptakan ekosistem yang menghubungkan antara ketaatan spiritual dan kesuksesan
-            finansial untuk kejayaan umat.
+            Gerakan dakwah, sosial, pendidikan, dan pemberdayaan umat. Membangun peradaban berbasis
+            masjid untuk keberkahan Indonesia.
           </p>
           <div className="flex gap-4">
             {socials.map((social) => (
@@ -104,7 +104,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10 py-8 px-margin-desktop text-center">
         <p className="font-body-md text-body-md text-surface-variant/50">
-          © 2024 Masjid Muslim Billionaire. Excellence in Service and Worship.
+          © 2024 Masjid Muslim Billionaire · Yayasan Muslim Billionaire Indonesia (YMBI).
         </p>
       </div>
     </footer>

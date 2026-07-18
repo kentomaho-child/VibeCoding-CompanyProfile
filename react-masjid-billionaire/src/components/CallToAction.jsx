@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom'
+
 const benefits = [
-  'Networking eksklusif dengan para pengusaha sukses.',
-  'Akses ke perpustakaan digital ekonomi syariah.',
-  'Bimbingan spiritual intensif untuk ketenangan batin.',
+  'Menyenangkan \u2014 pengalaman belajar dan beribadah yang nyaman.',
+  'Mengenyangkan \u2014 manfaat nyata melalui program sosial dan pemberdayaan.',
+  'Mencerahkan \u2014 membangun masyarakat dengan pendidikan Al-Qur\u2019an.',
 ]
 
 export default function CallToAction() {
@@ -16,23 +18,23 @@ export default function CallToAction() {
           />
           <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg border-l-4 border-emerald-accent">
             <p className="font-body-md text-body-md text-primary italic">
-              "Keberhasilan finansial adalah wasilah, keridhaan Allah adalah ghayah (tujuan utama)
-              kita."
+              "Mendatangkan keberkahan untuk Indonesia dengan optimasi kemakmuran masjid
+              berdasarkan konsep Masajidallah."
             </p>
             <p className="font-label-md text-label-md text-emerald-accent mt-2 font-bold">
-              — Ust. Pembina Masjid
+              — Visi Masjid Muslim Billionaire
             </p>
           </div>
         </div>
 
         <div className="space-y-8">
           <h2 className="font-headline-lg text-headline-lg text-primary">
-            Mari Bergabung dalam Ekosistem Billionaire Muslim
+            Mari Membangun Peradaban Berbasis Masjid
           </h2>
           <p className="font-body-lg text-body-lg text-on-surface-variant">
-            Kami tidak hanya membangun masjid sebagai tempat sholat, tapi sebagai sentral kehidupan
-            umat. Bergabunglah dalam program bimbingan bisnis mingguan dan rasakan keberkahan dalam
-            setiap langkah usaha Anda.
+            Kami tidak hanya membangun masjid sebagai tempat ibadah, tetapi sebagai pusat lahirnya
+            solusi bagi berbagai persoalan umat. Bersama donatur, relawan, dan masyarakat, mari
+            hadirkan manfaat yang berkelanjutan bagi umat.
           </p>
           <ul className="space-y-4">
             {benefits.map((benefit) => (
@@ -47,9 +49,12 @@ export default function CallToAction() {
               </li>
             ))}
           </ul>
-          <button className="px-10 py-5 bg-primary text-white rounded-lg font-label-md text-label-md uppercase tracking-wider hover:bg-emerald-accent transition-all shadow-lg">
+          <Link
+            to="/about"
+            className="inline-block px-10 py-5 bg-primary text-white rounded-lg font-label-md text-label-md uppercase tracking-wider hover:bg-emerald-accent transition-all shadow-lg"
+          >
             Pelajari Selengkapnya
-          </button>
+          </Link>
         </div>
       </div>
     </section>
