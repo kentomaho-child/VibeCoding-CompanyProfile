@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 const navLinks = [
-  { label: 'Home', href: '#', active: true },
-  { label: 'Programs', href: '#' },
-  { label: 'Directory', href: '#' },
-  { label: 'Zakat', href: '#' },
-  { label: 'About', href: '#' },
+  { label: 'Home', to: '/' },
+  { label: 'Programs', to: '/' },
+  { label: 'Directory', to: '/' },
+  { label: 'Zakat', to: '/' },
+  { label: 'About', to: '/about' },
 ]
 
 export default function Navbar() {
@@ -26,7 +27,7 @@ export default function Navbar() {
       }`}
     >
       <div className="flex justify-between items-center h-full px-gutter max-w-max-width mx-auto">
-        <div className="flex items-center gap-2">
+        <NavLink to="/" className="flex items-center gap-2">
           <span
             className="material-symbols-outlined text-emerald-accent text-3xl"
             style={{ fontVariationSettings: "'FILL' 1" }}
@@ -36,21 +37,24 @@ export default function Navbar() {
           <span className="font-headline-md text-headline-md font-bold text-primary">
             Masjid Muslim Billionaire
           </span>
-        </div>
+        </NavLink>
 
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className={`font-label-md text-label-md uppercase tracking-wider transition-colors ${
-                link.active
-                  ? 'text-emerald-accent font-bold border-b-2 border-emerald-accent pb-1'
-                  : 'text-on-surface hover:text-emerald-accent'
-              }`}
+          {navLinks.map((link, index) => (
+            <NavLink
+              key={`${link.label}-${index}`}
+              to={link.to}
+              end={link.to === '/'}
+              className={({ isActive }) =>
+                `font-label-md text-label-md uppercase tracking-wider transition-colors ${
+                  isActive && link.to !== '/'
+                    ? 'text-emerald-accent font-bold border-b-2 border-emerald-accent pb-1'
+                    : 'text-on-surface hover:text-emerald-accent'
+                }`
+              }
             >
               {link.label}
-            </a>
+            </NavLink>
           ))}
         </div>
 

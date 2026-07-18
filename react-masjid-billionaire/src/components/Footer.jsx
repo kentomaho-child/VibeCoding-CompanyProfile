@@ -1,4 +1,12 @@
-const quickLinks = ['Privacy Policy', 'Terms of Service', 'Contact Us', 'Volunteer']
+import { Link } from 'react-router-dom'
+
+const quickLinks = [
+  { label: 'About Us', to: '/about' },
+  { label: 'Privacy Policy', to: '/' },
+  { label: 'Terms of Service', to: '/' },
+  { label: 'Contact Us', to: '/' },
+  { label: 'Volunteer', to: '/' },
+]
 
 const contacts = [
   { icon: 'location_on', text: 'Jl. Peradaban No. 101, Jakarta Selatan, DKI Jakarta' },
@@ -47,13 +55,13 @@ export default function Footer() {
           </h4>
           <nav className="flex flex-col gap-4">
             {quickLinks.map((link) => (
-              <a
-                key={link}
+              <Link
+                key={link.label}
                 className="text-surface-variant/70 hover:text-tertiary-fixed transition-colors font-body-md"
-                href="#"
+                to={link.to}
               >
-                {link}
-              </a>
+                {link.label}
+              </Link>
             ))}
           </nav>
         </div>

@@ -1,39 +1,17 @@
-import { useEffect, useRef } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Features from './components/Features'
-import Stats from './components/Stats'
-import CallToAction from './components/CallToAction'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
 
 export default function App() {
-  const sectionsRef = useRef([])
-
-  useEffect(() => {
-    const observerOptions = { threshold: 0.5 }
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in', 'fade-in', 'duration-1000')
-        }
-      })
-    }, observerOptions)
-
-    const sections = document.querySelectorAll('section')
-    sections.forEach((section) => observer.observe(section))
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main>
-        <Hero />
-        <Features />
-        <Stats />
-        <CallToAction />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
       <Footer />
     </div>
   )
