@@ -59,9 +59,12 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <button className="hidden lg:block px-6 py-2 border border-secondary text-secondary font-label-md text-label-md uppercase tracking-wider rounded-lg hover:bg-secondary hover:text-white transition-all">
+          <NavLink
+            to="/join"
+            className="hidden lg:block px-6 py-2 border border-secondary text-secondary font-label-md text-label-md uppercase tracking-wider rounded-lg hover:bg-secondary hover:text-white transition-all"
+          >
             Join Community
-          </button>
+          </NavLink>
           <button className="px-6 py-2 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md uppercase tracking-wider rounded-lg shadow-sm hover:shadow-md transition-all">
             Donate Now
           </button>

@@ -45,9 +45,12 @@ export default function About() {
             Kami percaya bahwa kekayaan adalah amanah untuk melayani Sang Pencipta.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <button className="w-full md:w-auto px-10 py-4 bg-secondary-container text-on-secondary-container font-label-md text-label-md uppercase tracking-widest rounded-lg font-bold hover:scale-105 transition-transform">
+            <Link
+              to="/join"
+              className="w-full md:w-auto px-10 py-4 bg-secondary-container text-on-secondary-container font-label-md text-label-md uppercase tracking-widest rounded-lg font-bold hover:scale-105 transition-transform"
+            >
               Gabung Komunitas
-            </button>
+            </Link>
             <a
               className="flex items-center gap-2 text-white hover:text-emerald-accent transition-colors font-label-md text-label-md uppercase tracking-widest"
               href="#sejarah"
@@ -207,7 +210,7 @@ export default function About() {
             spiritual. Masa depan umat ada di tangan kita yang berani melangkah.
           </p>
           <Link
-            to="/"
+            to="/join"
             className="inline-block px-12 py-5 bg-secondary text-white font-label-md text-label-md uppercase tracking-widest rounded-lg font-bold hover:bg-secondary-fixed-dim transition-all shadow-2xl shadow-secondary/20"
           >
             Gabung Komunitas Sekarang

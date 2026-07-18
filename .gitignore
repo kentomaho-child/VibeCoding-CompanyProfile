@@ -1,3 +1,8 @@
+# ==========================================================
+# Single .gitignore for the whole repository (all subfolders)
+# Uses **/ patterns so rules apply at root and in any subfolder
+# ==========================================================
+
 # Dependencies
 node_modules/
 **/node_modules/
@@ -8,19 +13,24 @@ node_modules/
 dist/
 **/dist/
 dist-ssr/
+**/dist-ssr/
 build/
+**/build/
 *.local
 
 # Vite / cache
 .vite/
 **/.vite/
 .cache/
+**/.cache/
 .temp/
 .tmp/
 .eslintcache
+**/.eslintcache
 
 # Logs
 logs/
+**/logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -32,6 +42,9 @@ lerna-debug.log*
 .env
 .env.local
 .env.*.local
+**/.env
+**/.env.local
+**/.env.*.local
 
 # Editor / OS files
 .vscode/*
@@ -47,4 +60,5 @@ Thumbs.db
 
 # Testing / coverage
 coverage/
+**/coverage/
 *.lcov

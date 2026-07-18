@@ -44,4 +44,12 @@
   .gold-border-gradient {
     border-image: linear-gradient(to right, #D4AF37, #F9D976) 1;
   }
+
+  .premium-shadow {
+    box-shadow: 0 10px 40px -10px rgba(15, 23, 42, 0.06);
+  }
+
+  .step-transition {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
