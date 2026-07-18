@@ -3,6 +3,9 @@
 # Uses **/ patterns so rules apply at root and in any subfolder
 # ==========================================================
 
+bun.lock
+Design
+
 # Dependencies
 node_modules/
 **/node_modules/

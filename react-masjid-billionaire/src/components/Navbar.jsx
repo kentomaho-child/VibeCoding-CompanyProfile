@@ -5,7 +5,7 @@ const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Programs', to: '/' },
   { label: 'Directory', to: '/' },
-  { label: 'Zakat', to: '/' },
+  { label: 'Zakat', to: '/zakat' },
   { label: 'About', to: '/about' },
 ]
 
